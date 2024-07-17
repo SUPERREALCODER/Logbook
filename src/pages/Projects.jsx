@@ -1,5 +1,5 @@
-import Card from "../components/ProjectCard";
-import ThePandel from "../assets/images/projects/ThePandel.webp";
+import ProjectCard from "../components/ProjectCard";
+import the_pandel from "../assets/images/projects/the_pandel.webp";
 import CosmicCalendar from "../assets/images/projects/CosmicCalendar.webp";
 const projects = [
   {
@@ -17,28 +17,10 @@ const projects = [
     title: "The Pandel",
     description:
       "Welcome to the Durga Puja Blog, your go-to source for all things related to Durga Puja celebration! This website is dedicated to providing insightful articles, vibrant photos, and engaging content that capture the essence of Durga Puja festivities.",
-    image: ThePandel,
+    image: the_pandel,
     wlink: "https://pandel.blogs.bodhon.in/",
     glink: "https://www.example.com",
     projectType: "Private",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "This is a description of project 3",
-    image: "https://via.placeholder.com/600x300",
-    wlink: "https://www.example.com",
-    glink: "https://www.example.com",
-    projectType: "Public",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "This is a description of project 4",
-    image: "https://via.placeholder.com/600x300",
-    wlink: "https://www.example.com",
-    glink: "https://www.example.com",
-    projectType: "Public",
   },
 ];
 const Projects = () => {
@@ -51,7 +33,7 @@ const Projects = () => {
           </h1>
           <div className="gap-10 grid grid-cols-1 md:px-10 pb-10 ">
             {projects.map((project) => (
-              <Card
+              <ProjectCard
                 key={project.id}
                 title={project.title}
                 description={project.description}

@@ -1,6 +1,13 @@
 import { Suspense } from "react";
-
-const Card = ({ title, description, image, wlink, glink, projectType }) => {
+import PropTypes from "prop-types";
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  wlink,
+  glink,
+  projectType,
+}) => {
   return (
     <>
       <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-4 rounded-lg p-6 lg:border-2 duration-300 dark:border-gray-800">
@@ -41,4 +48,13 @@ const Card = ({ title, description, image, wlink, glink, projectType }) => {
   );
 };
 
-export default Card;
+ProjectCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  wlink: PropTypes.string.isRequired,
+  glink: PropTypes.string,
+  projectType: PropTypes.string.isRequired,
+};
+
+export default ProjectCard;

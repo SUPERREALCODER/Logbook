@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo.svg";
+import logo2 from "../assets/images/file.svg"
 import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const FooterSection = () => {
@@ -62,9 +63,9 @@ const FooterSection = () => {
           <div className="mb-4 sm:mb-0">
             <Link to="/" className="flex items-center justify-center">
               <img
-                className="h-28 w-auto dark:invert"
+                className="h-32 w-auto"
                 // src="https://flowbite.com/docs/images/logo.svg"
-                src={logo}
+                src={logo2}
                 alt="LO&F Logo"
               />
               <div className=" text-2xl md:text-5xl">
@@ -101,9 +102,9 @@ const FooterSection = () => {
 
           {/* Follow Us */}
           <div className="space-y-2">
-            <h3 className="text-sm font-semibold uppercase mb-2 dark:text-gray-300">
+            <h1 className="text-sm font-semibold uppercase mb-2 dark:text-gray-300">
               Follow us
-            </h3>
+            </h1>
             <ul className="space-y-1">
               <li>
                 <a
@@ -126,9 +127,9 @@ const FooterSection = () => {
 
           {/* Legal */}
           <div className="space-y-2">
-            <h3 className="text-sm font-semibold uppercase mb-2 dark:text-gray-300">
+            <h1 className="text-sm font-semibold uppercase mb-2 dark:text-gray-300">
               Legal
-            </h3>
+            </h1>
             <ul className="space-y-1">
               <li>
                 <a

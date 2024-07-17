@@ -153,7 +153,7 @@ const Header = () => {
           >
             Sign In
           </Button> */}
-            <button
+            {/* <button
               type="submit"
               className={`${
                 isHomePage
@@ -162,7 +162,7 @@ const Header = () => {
               } whitespace-nowrap border-2 hover:border-gray-100 rounded-lg font-medium px-4 py-2 hover:bg-orange-500 hover:text-white duration-200 hidden md:block`}
             >
               Sign In
-            </button>
+            </button> */}
           </div>
         </div>
       </header>
