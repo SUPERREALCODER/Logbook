@@ -36,7 +36,12 @@ const About = () => {
           )
         );
         setUsers(membersData.map((response) => response.data));
-        console.log(membersData);
+        const members = membersData.map((response) => response.data);
+        console.log(
+          members.map((member) => ({
+            name: member.login,
+          }))
+        );
       } catch (error) {
         console.log("Error Fetching Data: ", error);
       } finally {
@@ -44,7 +49,7 @@ const About = () => {
       }
     };
     fetchGithubData();
-  });
+  }, []);
 
   // const team = [
   //   {
