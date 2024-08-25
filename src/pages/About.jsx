@@ -5,7 +5,7 @@ import axios from "axios";
 const About = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const githubUsers = ["darkxamper", "superrealcoder"];
+  const githubUsers = ["draxox", "superrealcoder"];
 
   useEffect(() => {
     const fetchGithubData = async () => {

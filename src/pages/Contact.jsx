@@ -44,7 +44,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="dark:text-white border-2 border-gray-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-800 hover:text-white hover:dark:text-gray-800 dark:hover:bg-gray-200 active:text-white active:scale-95 duration-150"
+                  className="w-full sm:w-1/4 dark:text-white border-2 border-gray-600 px-4 py-2 rounded-lg font-medium text-lg hover:bg-gray-800 hover:text-white hover:dark:text-gray-800 dark:hover:bg-gray-200 active:text-white active:scale-95 duration-150"
                 >
                   Submit
                 </button>

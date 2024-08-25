@@ -180,7 +180,7 @@ const Header = () => {
                   to={navItem.path}
                   key={index}
                   className={({ isActive }) =>
-                    `flex items-center gap-x-1 my-10 duration-150 text-gray-800 dark:text-gray-400 hover:text-orange-500 list-none cursor-pointer font-medium dark:hover:text-orange-500 ${
+                    `flex items-center gap-x-1 my-10 duration-150 text-gray-900 dark:text-gray-400 hover:text-orange-500 list-none cursor-pointer font-medium dark:hover:text-orange-500 ${
                       isActive ? "text-orange-600 dark:text-orange-500" : ""
                     }`
                   }
@@ -192,7 +192,7 @@ const Header = () => {
               ))}
             </ul>
             <div className="flex items-center gap-x-4">
-              <button
+              {/* <button
                 type="submit"
                 className={`${
                   isHomePage
@@ -201,8 +201,8 @@ const Header = () => {
                 } whitespace-nowrap border-2 border-orange-500 rounded-lg font-medium px-6 py-4 hover:bg-orange-500 hover:text-white duration-200 w-full text-3xl`}
               >
                 Sign In
-              </button>
-              <div className="lg:border-l-2 lg:border-gray-300 dark:border-gray-600 lg:pl-4">
+              </button> */}
+              <div className="border-2 border-gray-700 duration-200 p-4 rounded-lg lg:border-l-2 lg:border-gray-300 dark:border-gray-600 lg:pl-4">
                 {toggleMode ? (
                   <MdOutlineLightMode
                     className="text-4xl cursor-pointer  dark:text-white dark:hover:text-orange-500 "
