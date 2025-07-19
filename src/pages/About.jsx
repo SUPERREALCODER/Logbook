@@ -1,49 +1,34 @@
-import { useEffect, useState } from "react";
+// About.jsx
+"use client";
+import { useEffect, useState, useRef } from "react";
 import TeamCard from "../components/TeamCard";
 import axios from "axios";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
+const githubUsers = ["superrealcoder"];
 
 const About = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const githubUsers = ["draxox", "superrealcoder"];
+  const container = useRef();
 
+  // Fetch GitHub users
   useEffect(() => {
     const fetchGithubData = async () => {
-      // try {
-      //   const membersData = await Promise.all(
-      //     githubUsers.map(async (username) => {
-      //       const response = await fetch(
-      //         `https://api.github.com/users/${username}`
-      //       );
-      //       if (!response.ok) {
-      //         throw new Error(`Failed to fetch data for user: ${username}`);
-      //       }
-      //       return response.json();
-      //     })
-      //   );
-      //   setUsers(membersData);
-      //   console.log(membersData);
-      // } catch (error) {
-      //   console.log("Error Fetching Data: ", error);
-      // } finally {
-      //   setLoading(false);
-      // }
-
       try {
         const membersData = await axios.all(
           githubUsers.map((username) =>
             axios.get(`https://api.github.com/users/${username}`)
           )
         );
-        setUsers(membersData.map((response) => response.data));
-        const members = membersData.map((response) => response.data);
-        console.log(
-          members.map((member) => ({
-            name: member.login,
-          }))
-        );
+        setUsers(membersData.map((r) => r.data));
       } catch (error) {
-        console.log("Error Fetching Data: ", error);
+        console.error("Error fetching GitHub data:", error);
       } finally {
         setLoading(false);
       }
@@ -51,60 +36,112 @@ const About = () => {
     fetchGithubData();
   }, []);
 
-  // const team = [
-  //   {
-  //     name: "John Doe",
-  //     title: "CEO",
-  //     image: "https://via.placeholder.com/100",
-  //     description:
-  //       "John has over 20 years of experience in the industry and is dedicated to leading our company to success.",
-  //   },
-  //   {
-  //     name: "Jane Smith",
-  //     title: "CTO",
-  //     image: "https://via.placeholder.com/100",
-  //     description:
-  //       "Jane is a tech enthusiast with a passion for innovation and development.",
-  //   },
-  //   {
-  //     name: "Alice Johnson",
-  //     title: "COO",
-  //     image: "https://via.placeholder.com/100",
-  //     description:
-  //       "Alice brings a wealth of operational expertise and a track record of success.",
-  //   },
-  // ];
+  
+  
 
   return (
-    <>
-      <div className="flex flex-col items-center min-h-screen py-10 dark:bg-[#0d121cf9]">
+   <>
+      <div ref={container} className="flex flex-col items-center min-h-screen py-10 dark:bg-[#0d121cf9]">
         <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-2xl text-orange-600 dark:text-orange-500 font-semibold tracking-wide uppercase">
-              About Us
+            <h2 className="text-2xl text-blue-600 dark:text-blue-500 font-semibold tracking-wide uppercase">
+              About Me
             </h2>
             <p className="mt-1 text-4xl leading-10 font-extrabold text-gray-900 dark:text-white sm:text-5xl sm:leading-none lg:text-6xl">
-              Our Story
+              🧭 Who I Am
             </p>
             <p className="mt-5 max-w-xl mx-auto text-xl text-gray-500 dark:text-gray-400">
-              We are a creative agency focused on building brands and digital
-              products.
+              Hi, I’m Deba — also known as SRC in the worlds of code.
+              Short for Superrealcoder, it began as a username, but it stuck —
+              a quiet reminder to create things that are real, yet a little beyond.
+
+              An Inspired Explorer, I navigate between the logic of machines and the mystery of meaning —
+              coding realities and charting ideas that might just matter.
+
+              I believe in building what feels true, playful, and sometimes even a little wild —
+              things that help, express, surprise, or simply spark curiosity.
+
+
             </p>
           </div>
 
           <div className="mt-10">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Our Mission
+              🚀 What Drives Me
             </h3>
             <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
-              Our mission is to deliver high-quality creative solutions that
-              help businesses grow and succeed in the digital world.
+              I explore the edges where technology, sustainability, and curiosity intersect.
+              From building full-stack web platforms, crafting IoT systems, developing visual novels, and writing research papers — to training in PV systems, working on electric bikes, or designing navigation visors for riders — I treat every project like an expedition.
+
+              I’ve tried building startups — some stalled, some sparked, and all shaped me.
+              Now, I build with intention: what I create should help someone, somewhere, even quietly.
             </p>
           </div>
 
           <div className="mt-10">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Meet Our Team
+              
+            🔎 What I Care About
+            </h3>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+             Designing with thought.
+
+             Solving with joy.
+
+             Staying curious.
+
+             Trusting the process — and the people in it.
+
+             Following inspiration (often from my mother, nature, or books).
+
+            </p>
+          </div>
+
+
+           <div className="mt-10">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              
+            🎒 You’ll Find Me…
+            </h3>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+             Writing or editing code with a sense of play
+
+             Making interfaces that feel something
+
+             Talking about sustainability, quantum tech, or space
+
+             Recording raw vlogs under “Walk with Deba”
+
+             Building towards something real, not perfect
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              
+            🧠 A Line I Hold Close
+            </h3>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+             “To explore and create something that’s true and fun — that’s when it blossoms.”
+            </p>
+          </div>
+
+
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              
+            🌍 Want to explore with me?
+            </h3>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+             Let’s build things that matter — or at least wonder together.
+             → [Contact me] or [See Projects]
+            </p>
+          </div>
+
+
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Socials
             </h3>
             {loading ? (
               <h1 className="text-xl animate-pulse">Loading...</h1>

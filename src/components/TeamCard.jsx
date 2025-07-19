@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 const TeamCard = ({ name, title, image, bio }) => {
   return (
     <>
-      <div className=" bg-gradient-to-t from-transparent via-slate-300 p-[2px] rounded-xl">
+      <div className=" bg-gradient-to-t from-transparent via-slate-300 p-[2px] rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.7)]">
         <div className="h-full flex flex-col justify-between bg-white dark:bg-gray-900 p-6 rounded-[calc(0.75rem-2px)] border dark:border-gray-600">
           <div className="flex flex-col items-center">
             <img

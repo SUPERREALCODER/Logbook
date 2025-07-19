@@ -10,7 +10,7 @@ const navList = [
     path: "/",
   },
   {
-    name: "About Us",
+    name: "About",
     path: "/about",
   },
   {
@@ -21,6 +21,10 @@ const navList = [
     name: "Contact",
     path: "/contact",
   },
+  {
+    name: "Explorer's Log",
+    path: "http://localhost:5173/",
+  }
 ];
 
 const Header = () => {
@@ -50,7 +54,7 @@ const Header = () => {
   // }, [isHomePage]);
 
   useEffect(() => {
-    if (toggleMode === true) {
+    if (toggleMode === false) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
@@ -81,8 +85,9 @@ const Header = () => {
           {/* logo */}
           <NavLink to="/">
             <div className="w-[100px] text-2xl md:text-4xl">
-              <span className={`${isHomePage ? "text-white" : ""}`}>Bod</span>
-              <span className="text-orange-500">hon</span>
+              <span className={`${isHomePage ? "text-white" : ""}`}>S</span>
+              <span className="text-blue-500">R</span>
+              <span className="text-blue-500">C</span>
             </div>
           </NavLink>
 
@@ -103,9 +108,9 @@ const Header = () => {
                   to={navItem.path}
                   key={index}
                   className={({ isActive }) =>
-                    `flex items-center gap-x-1 duration-150 hover:text-orange-500 list-none cursor-pointer font-medium  dark:hover:text-orange-500 ${
+                    `flex items-center gap-x-1 duration-150 hover:text-blue-500 list-none cursor-pointer font-medium  dark:hover:text-blue-500 ${
                       isActive
-                        ? "text-orange-500 dark:text-orange-500"
+                        ? "text-blue-500 dark:text-blue-500"
                         : isHomePage
                         ? "text-white"
                         : ""
@@ -119,50 +124,22 @@ const Header = () => {
             </ul>
             {/* Mode Toggle */}
             <div className="lg:border-l-2 lg:border-gray-400 dark:border-gray-600 lg:pl-4 hidden md:block">
-              {toggleMode ? (
+              {/* {toggleMode ? ( */}
                 <MdOutlineLightMode
                   className="text-2xl cursor-pointer dark:text-white dark:hover:text-orange-500 "
-                  onClick={handleToggleMode}
+                  // onClick={handleToggleMode}
                 />
-              ) : (
+              {/* ) : (
                 <MdOutlineDarkMode
                   className={` ${
                     isHomePage ? "text-gray-300" : "text-gray-500"
                   } text-2xl cursor-pointer hover:text-orange-500 `}
                   onClick={handleToggleMode}
                 />
-              )}
+              )} */}
             </div>
 
-            {/* Sign In Button */}
-            {/* <NavLink to={"/signin"}>
-            <Button
-              outline
-              gradientDuoTone="pinkToOrange"
-              size="sm"
-              className="whitespace-nowrap"
-            >
-              Sign In
-            </Button>
-          </NavLink> */}
-            {/* <Button
-            // outline
-            // gradientDuoTone="pinkToOrange"
-            size="sm"
-            className="whitespace-nowrap bg-transparent border border-transparent"
-          >
-            Sign In
-          </Button> */}
-            {/* <button
-              type="submit"
-              className={`${
-                isHomePage
-                  ? "text-white border-orange-500"
-                  : "border-orange-500"
-              } whitespace-nowrap border-2 hover:border-gray-100 rounded-lg font-medium px-4 py-2 hover:bg-orange-500 hover:text-white duration-200 hidden md:block`}
-            >
-              Sign In
-            </button> */}
+           
           </div>
         </div>
       </header>
@@ -203,17 +180,17 @@ const Header = () => {
                 Sign In
               </button> */}
               <div className="border-2 border-gray-700 duration-200 p-4 rounded-lg lg:border-l-2 lg:border-gray-300 dark:border-gray-600 lg:pl-4">
-                {toggleMode ? (
+                {/* {toggleMode ? ( */}
                   <MdOutlineLightMode
                     className="text-4xl cursor-pointer  dark:text-white dark:hover:text-orange-500 "
-                    onClick={handleToggleMode}
+                    // onClick={handleToggleMode}
                   />
-                ) : (
+                {/* ) : (
                   <MdOutlineDarkMode
                     className="text-4xl cursor-pointer text-gray-5800 hover:text-orange-500 "
                     onClick={handleToggleMode}
                   />
-                )}
+                )} */}
               </div>
             </div>
           </div>

@@ -56,7 +56,7 @@ const FooterSection = () => {
     //   </div>
     // </Footer>
 
-    <footer className=" z-10 bg-[#FAFAFA] dark:bg-[#0D121C] text-gray-800 dark:text-white border-t dark:border-none border-gray-200 dark:border-gray-800">
+    <footer className=" z-10 bg-[#ecc6c6] dark:bg-[#0D121C] text-gray-800 dark:text-white border-t dark:border-none border-gray-200 dark:border-gray-800">
       <div className="max-w-[1280px] mx-auto py-8 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {/* Logo and Brand */}
@@ -69,8 +69,9 @@ const FooterSection = () => {
                 alt="LO&F Logo"
               />
               <div className=" text-2xl md:text-5xl">
-                <span className="dark:text-white">Bod</span>
-                <span className="text-orange-500">hon</span>
+                <span className="dark:text-white">S</span>
+                <span className="text-blue-500">R</span>
+                <span className="text-blue-500">C</span>
               </div>
             </Link>
           </div>

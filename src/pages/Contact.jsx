@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="flex flex-col items-center min-h-screen py-10 dark:bg-[#0d121cf9]">
         <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-2xl text-orange-600 dark:text-orange-500 font-semibold tracking-wide uppercase">
+            <h2 className="text-2xl text-blue-600 dark:text-blue-500 font-semibold tracking-wide uppercase">
               Contact Us
             </h2>
             <p className="mt-1 text-4xl leading-10 font-extrabold text-gray-900 dark:text-white sm:text-5xl sm:leading-none lg:text-6xl">
