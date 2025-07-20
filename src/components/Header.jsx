@@ -78,8 +78,8 @@ const Header = () => {
         className={`${
           isHomePage
             ? "fixed bg-[rgba(255,255,255,0.05)] "
-            : "sticky bg-[rgba(255,255,255,0.3)] backdrop-blur-lg"
-        } w-full top-0 z-20 dark:border-gray-800 p-4 font-poppins shadow dark:bg-[#0D121C] dark:text-white duration-300  `}
+            : "sticky bg-[rgba(255,255,255,0.3)] backdrop-blur-lg  dark:border-gray-800 dark:bg-[#0D121C] dark:text-white"
+        } w-full top-0 z-20 p-4 font-poppins shadow  duration-300  `}
       >
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
           {/* logo */}
