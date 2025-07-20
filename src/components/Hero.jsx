@@ -69,7 +69,7 @@ const Hero = () => {
     src={person}
     alt="Person"
     className="absolute bottom-0 left-0 -translate-x-1 h-2/3 object-contain scale-125"
-    style={{ zIndex: 1 }}
+    style={{ zIndex: 0 }}
   />
 </div>
 
@@ -88,7 +88,7 @@ const Hero = () => {
           </p>
           <Link to={"/projects"}>
  <button className="mt-10 px-6 py-3 bg-white text-black font-bold rounded-md hover:bg-blue-500"
- style={{ zIndex: 2}}>
+ style={{ zIndex: 2 }}>
    See what I've built
 </button>
 
